@@ -36,7 +36,7 @@
                         </div>
                         <!-- text contact -->
                         <div class="text-contact pl10">
-                            <div class="name-user b-font">Giulia</div>
+                            <div class="name-user b-font">{{userName}}</div>
                         </div>
                         <!-- /text contact -->
                         <div class="icons-user pr20">
@@ -48,11 +48,11 @@
                     <!-- /user -->
                 </div>
                 <!-- notification -->
-                <div class="notification pl20">
+                <div class="notification">
                     <div class="bell"><i class="fa-solid fa-bell-slash"></i></div>
                     <div class="notif-text pl10">
                         <p class="b-font">Ricevi notifiche di nuovi messaggi</p>
-                        <p>Attiva notifiche desktop</p>
+                        <p class="active-notify">Attiva notifiche desktop</p>
                     </div>
                 </div>
                 <!-- /notification -->
@@ -65,15 +65,14 @@
                 <!-- contact list -->
                 <div class="contacts-list">
                     <ul>
-                        <li>
+                        <li v-for="(contact, index) in contacts">
                             <div class="contact select-contact">
                                 <div class="img-contact pl20">
-
-                                    <img src="img/avatar_1.jpg" alt="avatar1">
+                                    <img :src="contact.avatar" :alt="contact.name">
                                 </div>
                                 <!-- text contact -->
                                 <div class="text-contact pl20 mt15">
-                                    <div class="name-contact b-font">Michele</div>
+                                    <div class="name-contact b-font">{{contact.name}}</div>
                                     <div class="last-msg small-font mt10">Ultimo messaggio inviato</div>
                                 </div>
                                 <!-- /text contact -->
@@ -94,7 +93,7 @@
                 <div class="header-chat">
                     <div class="img-chat-user pl10">
 
-                        <img src="img/avatar_io.jpg" alt="avatario">
+                        <img src="img/avatar_1.jpg" alt="avatar1">
                     </div>
                     <!-- text contact -->
                     <div class="chat-info pl20">
