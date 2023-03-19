@@ -6,12 +6,25 @@ Reset
     padding: 0;
     box-sizing: border-box;
 }
-body{
-    background: linear-gradient(to top,#dadbd3 85%, #009688 15%);
-}
+/**********************
+Variables
+***********************/
+:root{
+    --dark-grey-icons:#b1b1b1;
+    --dark-grey-text:#8b9191; 
+    --light-grey-text:#b5c0d2
+
+} 
+
+
 /**********
 Common
 ***********/
+body{
+    background: linear-gradient(to top,#dadbd3 85%, #009688 15%);
+    font-family: 'Lato', sans-serif;
+}
+
 .display-none{
     display: none;
 }
@@ -26,6 +39,15 @@ Common
 }
 .mt15{
     margin-top: .9375rem;
+}
+
+.b-font{
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.select-contact{
+    background-color: #e9ebeb;
 }
 /**********
 Main
@@ -53,12 +75,30 @@ Contacts
     width: 560px;
     display: flex;
     flex-direction: column;
+    
 
 }
 .header-contacts{
     background-color: #eaeaea;
     height: 4.6875rem;
+
 }
+.header-contacts .user{
+    display: flex;
+    flex-wrap: wrap;   
+    align-items: center;
+    justify-content: space-around;
+
+}
+.img-user img{
+    width: 3.4375rem;
+    border-radius: 50%;
+    margin: .625rem 0;
+}
+
+/* .header-contacts .user .name-user{
+    flex-grow: 1;
+} */
 .notification{
     height: 5.3125rem;
     background-color: #8edafc;
@@ -83,24 +123,24 @@ Contacts
 
 .contacts-list{
     display: flex;
-    flex-wrap: wrap;
-    
+    flex-wrap: wrap; 
+    overflow-y: auto;  
 }
-
+.search-bar{
+    margin: .625rem;
+}
 #search-user{
     width: 100%;
     padding: .9375rem 1.25rem;
-    margin: .625rem
+
 
 }
 .contacts-list ul{
 width: 100%;
 }
 .contacts-list .contact{
-    
     height: 5rem;
     display: flex;
-    background-color: aquamarine;
     justify-content: space-between;
 }
 li{
@@ -108,7 +148,6 @@ li{
 }
 .img-contact img{
     width: 4.0625rem;
-    margin: auto 0;
     border-radius: 50%;
     margin: .625rem 0;
 }

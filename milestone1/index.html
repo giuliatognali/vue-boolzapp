@@ -5,6 +5,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- font Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <!-- /font Google -->
     <!-- font awsome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
         integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
@@ -23,29 +28,68 @@
             <!-- contacts container -->
             <div class="box-contacts">
                 <div class="header-contacts pl10">
+                    <!-- user -->
+                    <div class="user">
+                        <div class="img-user">
 
-                    contatti
+                            <img src="img/avatar_1.jpg" alt="avatar1">
+                        </div>
+                        <!-- text contact -->
+                        <div class="text-contact pl10">
+                            <div class="name-user b-font">Giulia</div>
+                        </div>
+                        <!-- /text contact -->
+                        <div class="icons-user">
+                            icone icone icone
+                        </div>
+                    </div>
+                    <!-- /user -->
                 </div>
+                <!-- notification -->
                 <div class="notification pl20">
                     <div class="bell"><i class="fa-solid fa-bell-slash"></i></div>
-                    ricevi notifiche
+                    <div class="notif-text pl10">
+                        <p class="b-font">Ricevi notifiche di nuovi messaggi</p>
+                        <p>Attiva notifiche desktop</p>
+                    </div>
                 </div>
-                <div class="contacts-list">
+                <!-- /notification -->
+                <!-- search bar -->
+                <div class="search-bar">
                     <label class=display-none for="search-user">Cerca</label>
                     <input type="text" name="searchUser" id="search-user" placeholder="Cerca o inizia una nuova chat">
-                    <!-- contact list -->
+                </div>
+                <!-- search bar -->
+                <!-- contact list -->
+                <div class="contacts-list">
                     <ul>
                         <li>
-                            <div class="contact">
+                            <div class="contact select-contact">
                                 <div class="img-contact pl20">
-                                    
-                                     <img src="img/avatar_1.jpg" alt="avatar1">
+
+                                    <img src="img/avatar_1.jpg" alt="avatar1">
                                 </div>
                                 <!-- text contact -->
                                 <div class="text-contact pl20 mt15">
-                                    <div class="name-contact">Michele</div>
+                                    <div class="name-contact b-font">Michele</div>
                                     <div class="last-msg">Ultimo contatto</div>
+                                </div>
+                                <!-- /text contact -->
+                                <div class="time-contact mt15 pd10">
+                                    12:00
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="contact">
+                                <div class="img-contact pl20">
 
+                                    <img src="img/avatar_1.jpg" alt="avatar1">
+                                </div>
+                                <!-- text contact -->
+                                <div class="text-contact pl20 mt15">
+                                    <div class="name-contact b-font">Michele</div>
+                                    <div class="last-msg">Ultimo contatto</div>
                                 </div>
                                 <!-- /text contact -->
                                 <div class="time-contact mt15 pd10">
@@ -54,8 +98,9 @@
                             </div>
                         </li>
                     </ul>
-                    <!-- /contact list -->
+
                 </div>
+                <!-- /contact list -->
             </div>
 
             <!-- /contacts container -->
