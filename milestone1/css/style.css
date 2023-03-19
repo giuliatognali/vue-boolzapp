@@ -1,0 +1,124 @@
+/**********
+Reset
+***********/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: linear-gradient(to top,#dadbd3 85%, #009688 15%);
+}
+/**********
+Common
+***********/
+.display-none{
+    display: none;
+}
+.pl10{
+    padding-left: .625rem;
+}
+.pl20{
+    padding-left: 1.25rem;
+}
+.pd10{
+    padding-right: .625rem;
+}
+.mt15{
+    margin-top: .9375rem;
+}
+/**********
+Main
+***********/
+#app{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main-container{
+    width: 100rem;
+    background-color: lightblue;
+    height: 95vh;
+    display: flex;
+    padding: 0;
+
+}
+/**********
+Contacts
+************/
+.box-contacts{
+    background-color:#fafafa;
+    width: 560px;
+    display: flex;
+    flex-direction: column;
+
+}
+.header-contacts{
+    background-color: #eaeaea;
+    height: 4.6875rem;
+}
+.notification{
+    height: 5.3125rem;
+    background-color: #8edafc;
+    display: flex;
+    align-items: center;
+}
+.bell{
+    background-color: white;
+    padding: .625rem;
+    height: 3.125rem;
+    width: 3.125rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.bell i{
+    font-size: 20px;
+    color:#8edafc
+}
+
+.contacts-list{
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+
+#search-user{
+    width: 100%;
+    padding: .9375rem 1.25rem;
+    margin: .625rem
+
+}
+.contacts-list ul{
+width: 100%;
+}
+.contacts-list .contact{
+    
+    height: 5rem;
+    display: flex;
+    background-color: aquamarine;
+    justify-content: space-between;
+}
+li{
+    list-style: none;
+}
+.img-contact img{
+    width: 4.0625rem;
+    margin: auto 0;
+    border-radius: 50%;
+    margin: .625rem 0;
+}
+.text-contact{
+    flex-grow: 1;
+}
+/**********
+Chat room
+************/
+.chat-room{
+    background-color: pink;
+    width: 100%;
+}
