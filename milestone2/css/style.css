@@ -172,20 +172,19 @@ Contacts
     align-items: center;
     margin: .625rem;
     border-radius: 5px;
+    background-color: white;
     border: solid .0625rem var(--light-grey-text);
 }
 .search-bar i{
     padding: .625rem 1.25rem;
-    border-right: solid .0625rem var(--light-grey-text);
-    background-color: white;
+    border-right: solid .0625rem var(--light-grey-text); 
     color: var(--medium-grey-icons);
-
 }
 #search-user {
     width: 100%;
     padding: .625rem 1.25rem;
+    border-radius: 5px;
     border:none;
-
 }
 
 .contacts-list ul {
@@ -244,12 +243,12 @@ Chat room
     padding-top:3.75rem;
 
 }
-.msg-sent{
+.sent{
     display: flex;
     justify-content: flex-end;
     margin-bottom: .625rem;
 }
-.msg-recived{
+.received{
     display: flex;
     justify-content: flex-start;
     margin-bottom: .625rem;
@@ -262,11 +261,11 @@ Chat room
     min-width: 80px;
     border-radius: .625rem;
 }
-.msg-sent .msg-content{
+.sent .msg-content{
     background-color:#d5f9ba;
     margin-right: 6.5625rem;
 }
-.msg-recived .msg-content{
+.received .msg-content{
     background-color: #ffffff;
     margin-left: 6.5625rem;
 }

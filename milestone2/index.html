@@ -66,7 +66,8 @@
                 <!-- contact list -->
                 <div class="contacts-list">
                     <ul>
-                        <li v-for="(contact, index) in contacts" :class="{'select-contact' : index === this.selectContact}" @click="currentChat(index)">
+                        <li v-for="(contact, index) in contacts"
+                            :class="{'select-contact' : index === this.selectContact}" @click="currentChat(index)">
                             <div class="contact">
                                 <div class="img-contact pl20">
                                     <img :src="contact.avatar" :alt="contact.name">
@@ -110,24 +111,13 @@
 
                 </div>
                 <!-- /header chat -->
-                <!-- main chat -->
+                <!-- main chat // conversation -->
                 <div class="main-chat-container">
-                    <div class="msg-sent">
-                        <div class="msg-content">
-                            <div class="msg-text">hai portato giu il cane?</div>
-                            <div class="msg-time small-font">12:00</div>
-                        </div>
-                    </div>
-                    <div class="msg-sent">
-                        <div class="msg-content">
-                            <div class="msg-text">No</div>
-                            <div class="msg-time small-font">12:00</div>
-                        </div>
-                    </div>
-                    <div class="msg-recived">
-                        <div class="msg-content">
-                            <div class="msg-text">sì</div>
-                            <div class="msg-time small-font">12:01</div>
+                    <div class="msg-card" :class="(element.status)"
+                        v-for="(element, index) in contacts[selectContact].messages">
+                        <div class="msg-content ">
+                            <div class="msg-text">{{element.message}}</div>
+                            <div class="msg-time small-font">{{element.date}}</div>
                         </div>
                     </div>
                 </div>
@@ -137,7 +127,7 @@
                     <div class="emoticon">
                         <i class="fa-regular fa-face-smile"></i>
                     </div>
-                    <div class="msg-input">      
+                    <div class="msg-input">
                         <label class="display-none" for="msg-text">Scrivi un messaggio</label>
                         <input type="text" name="msg-text" id="msg-text" placeholder="Scrivi un messaggio">
                     </div>
