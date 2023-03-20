@@ -5,7 +5,6 @@ createApp({
         return {
             userName: 'Giulia',
             selectContact: 0,
-            newMsg: '',
             contacts: [
                 {
                     name: 'Michele',
@@ -176,6 +175,6 @@ createApp({
         currentChat(index){
             this.selectContact = index
             console.log(index)
-        }
+        },
     }
 }).mount('#app');
