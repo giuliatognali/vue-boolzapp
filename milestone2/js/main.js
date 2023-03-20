@@ -190,6 +190,16 @@ createApp({
             console.log(newMsg);
             this.contacts[this.selectContact].messages.push(newMsg);
             this.newText = '';
+        },
+        autoResponse(){
+            let newMsg = {
+                date: '10/01/2020 15:30:55',
+                message: 'ok',
+                status: 'received'
+                };
+            console.log(newMsg.message);
+            setTimeout (() =>{ this.contacts[this.selectContact].messages.push(newMsg);}, 1000)
+
         }
     }
 }).mount('#app');

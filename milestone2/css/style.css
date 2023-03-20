@@ -239,7 +239,7 @@ Chat room
 .main-chat-container{
     height:calc(100% - 75px);
     background-image: url(../img/mine.jpg);
-    overflow-y: scroll;
+    overflow-y: auto;
     padding-top:3.75rem;
 
 }
