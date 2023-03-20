@@ -5,6 +5,7 @@ createApp({
         return {
             userName: 'Giulia',
             selectContact: 0,
+            newText: '',
             newMsg: '',
             contacts: [
                 {
@@ -178,9 +179,17 @@ createApp({
             console.log(index);
         },
         addMsg(){
-            console.log(this.newMsg);
-            this.contacts[selectContact].messages.push(this.newMsg);
+            console.log(this.newText);
 
+            let newMsg = {
+            date: '10/01/2020 15:30:55',
+            message: this.newText,
+            status: 'sent'
+            };
+
+            console.log(newMsg);
+            this.contacts[this.selectContact].messages.push(newMsg);
+            this.newText = '';
         }
     }
 }).mount('#app');
