@@ -4,6 +4,7 @@ createApp({
     data() {
         return {
             userName: 'Giulia',
+            selectContact: 0,
             contacts: [
                 {
                     name: 'Michele',
@@ -169,5 +170,11 @@ createApp({
             ]
 
         }
+    },
+    methods: {
+        currentChat(index){
+            this.selectContact = index
+            console.log(index)
+        },
     }
 }).mount('#app');
