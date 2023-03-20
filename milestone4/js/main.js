@@ -210,7 +210,7 @@ createApp({
         // search contact in list
         searchList() {
             if (this.searchKey.trim() !== ''){
-                return this.contacts.filter(element => element.name.includes(this.searchKey));
+                return this.contacts.filter(element => element.name.toLowerCase().includes(this.searchKey.toLowerCase()));
             } else {
                 return this.contacts;
             }
