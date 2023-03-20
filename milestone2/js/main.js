@@ -175,7 +175,12 @@ createApp({
     methods: {
         currentChat(index){
             this.selectContact = index
-            console.log(index)
+            console.log(index);
+        },
+        addMsg(){
+            console.log(this.newMsg);
+            this.contacts[selectContact].messages.push(this.newMsg);
+
         }
     }
 }).mount('#app');
