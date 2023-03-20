@@ -167,14 +167,24 @@ Contacts
 }
 
 .search-bar {
+    display:flex;
+    align-items: center;
     margin: .625rem;
+    border-radius: 5px;
+    border: solid .0625rem var(--light-grey-text);
 }
+.search-bar i{
+    padding: .625rem 1.25rem;
+    border-right: solid .0625rem var(--light-grey-text);
+    background-color: white;
+    color: var(--medium-grey-icons);
 
+}
 #search-user {
     width: 100%;
     padding: .625rem 1.25rem;
-    border-radius: 5px;
-    border: solid .0625rem var(--light-grey-text);
+    border:none;
+
 }
 
 .contacts-list ul {
