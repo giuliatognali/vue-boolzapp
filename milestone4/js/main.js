@@ -7,6 +7,7 @@ createApp({
             selectContact: 0,
             newText: '',
             newMsg: '',
+            searchKey: '',
             contacts: [
                 {
                     name: 'Michele',
@@ -174,34 +175,46 @@ createApp({
         }
     },
     methods: {
-        currentChat(index){
+        currentChat(index) {
             this.selectContact = index
             console.log(index)
         },
-        addMsg(){
+        // new sent msg
+        addMsg() {
             console.log(this.newText);
 
             let newMsg = {
-            date: '10/01/2020 15:30:55',
-            message: this.newText,
-            status: 'sent'
+                date: '10/01/2020 15:30:55',
+                message: this.newText,
+                status: 'sent'
             };
 
             console.log(newMsg);
-            if(this.newText.trim() !== ''){
-            this.contacts[this.selectContact].messages.push(newMsg);
-            this.newText = '';
+            if (this.newText.trim() !== '') {
+                this.contacts[this.selectContact].messages.push(newMsg);
+                this.newText = '';
             }
         },
-        autoResponse(){
+        // new received msg 
+        autoResponse() {
+
             let newMsg = {
                 date: '10/01/2020 15:30:55',
                 message: 'ok',
                 status: 'received'
-                };
+            };
             console.log(newMsg.message);
-            setTimeout (() =>{ this.contacts[this.selectContact].messages.push(newMsg);}, 1000)
+            setTimeout(() => { this.contacts[this.selectContact].messages.push(newMsg); }, 1000)
+        },
 
+        // search contact in list
+        searchList() {
+            if (this.searchKey.trim() !== ''){
+                return this.contacts.filter(element => element.name.includes(this.searchKey));
+            } else {
+                return this.contacts;
+            }
         }
     }
-}).mount('#app');
+}
+).mount('#app');

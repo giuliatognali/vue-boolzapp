@@ -22,7 +22,7 @@
 </head>
 
 <body>
-    <div id="app">
+    <div id="app" v-cloak>
         <!-- main container -->
         <div class="main-container">
             <!-- contacts container -->
@@ -60,13 +60,13 @@
                 <!-- search bar -->
                 <div class="search-bar">
                     <label for="search-user"><i class="fa-solid fa-magnifying-glass"></i></label>
-                    <input type="text" name="searchUser" id="search-user" placeholder="Cerca o inizia una nuova chat">
+                    <input type="text" v-model="searchKey" @keyup="searchList" name="searchUser" id="search-user" placeholder="Cerca o inizia una nuova chat">
                 </div>
                 <!-- search bar -->
                 <!-- contact list -->
                 <div class="contacts-list">
                     <ul>
-                        <li v-for="(contact, index) in contacts"
+                        <li v-for="(contact, index) in searchList()"
                             :class="{'select-contact' : index === this.selectContact}" @click="currentChat(index)">
                             <div class="contact">
                                 <div class="img-contact pl20">
